@@ -7,7 +7,7 @@ export default function Index() {
       
       <div className="max-w-4xl mx-auto text-center mb-12">
         <h2 className="text-6xl font-bold mb-6" style={{ 
-          background: 'linear-gradient(to right, #FF6B35, #4E0C4, #FFE66D)',
+          background: 'linear-gradient(to right, #FF6B35, #4ECDC4, #FFE66D)',
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent'
         }}>

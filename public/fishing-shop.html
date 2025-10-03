@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рыболовный гардероб | Магазин одежды для рыбалки</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2c5f4f 0%, #1a3a2e 100%);
+            color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #a8dadc;
+        }
+
+        .hero {
+            position: relative;
+            height: 500px;
+            background: url('https://ohotaktiv.ru/upload/iblock/82e/pzj3mmk6ekf8elr3z50q0czq9f2sixr3.png') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.4);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .hero h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        section h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: #2c5f4f;
+            text-align: center;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-info h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #2c5f4f;
+        }
+
+        .product-info p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #e63946;
+            margin-bottom: 15px;
+        }
+
+        button {
+            background: #2c5f4f;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background 0.3s;
+            width: 100%;
+        }
+
+        button:hover {
+            background: #1a3a2e;
+        }
+
+        .fishing-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .fishing-gallery img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .about-text {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            font-size: 1.2em;
+            line-height: 1.8;
+            text-align: center;
+            color: #555;
+        }
+
+        footer {
+            background: #1a3a2e;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 60px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .hero h2 {
+                font-size: 2em;
+            }
+
+            .hero p {
+                font-size: 1.2em;
+            }
+
+            section h2 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🎣 Рыболовный гардероб</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#catalog">Каталог</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Добро пожаловать в магазин одежды для рыбаков</h2>
+            <p>Широкий выбор качественной экипировки для рыбалки в любое время года</p>
+        </div>
+    </section>
+
+    <section id="catalog">
+        <div class="container">
+            <h2>Каталог товаров</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1578632292335-df3abbb0d586?w=500" alt="Костюм рыболовный">
+                    <div class="product-info">
+                        <h3>Костюм рыболовный демисезонный</h3>
+                        <p>Влагозащитный костюм для комфортной рыбалки весной и осенью</p>
+                        <div class="price">9 990 ₽</div>
+                        <button>Купить</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=500" alt="Термобелье">
+                    <div class="product-info">
+                        <h3>Термобелье зимнее</h3>
+                        <p>Сохраняет тепло даже в самые морозные дни на льду</p>
+                        <div class="price">3 990 ₽</div>
+                        <button>Купить</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=500" alt="Куртка зимняя">
+                    <div class="product-info">
+                        <h3>Куртка рыболовная зимняя</h3>
+                        <p>Утепленная куртка с защитой от ветра и влаги</p>
+                        <div class="price">7 990 ₽</div>
+                        <button>Купить</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1605348532760-6753d2c43329?w=500" alt="Сапоги">
+                    <div class="product-info">
+                        <h3>Сапоги рыбацкие</h3>
+                        <p>Непромокаемые сапоги с утеплителем до -30°C</p>
+                        <div class="price">5 490 ₽</div>
+                        <button>Купить</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1556306535-0f09a537f0a3?w=500" alt="Перчатки">
+                    <div class="product-info">
+                        <h3>Перчатки неопреновые</h3>
+                        <p>Водонепроницаемые перчатки для работы со снастями</p>
+                        <div class="price">1 490 ₽</div>
+                        <button>Купить</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=500" alt="Жилет">
+                    <div class="product-info">
+                        <h3>Жилет рыболовный</h3>
+                        <p>Многофункциональный жилет с множеством карманов</p>
+                        <div class="price">4 290 ₽</div>
+                        <button>Купить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>О нас</h2>
+            <p class="about-text">
+                Мы специализируемся на продаже профессиональной одежды для рыбалки. 
+                Наша миссия — обеспечить рыбаков качественной экипировкой для комфортной 
+                рыбалки в любых условиях. Более 10 лет на рынке, тысячи довольных клиентов!
+            </p>
+            
+            <div class="fishing-gallery">
+                <img src="https://images.unsplash.com/photo-1545450660-7084c7e0cfda?w=600" alt="Рыбак на озере">
+                <img src="https://images.unsplash.com/photo-1534043464124-3be32fe000c9?w=600" alt="Зимняя рыбалка">
+                <img src="https://images.unsplash.com/photo-1504887005746-f9db2fb3e69d?w=600" alt="Рыбалка на реке">
+            </div>
+        </div>
+    </section>
+
+    <section id="contacts">
+        <div class="container">
+            <h2>Контакты</h2>
+            <p class="about-text">
+                📍 Адрес: г. Москва, ул. Рыбацкая, д. 15<br>
+                📞 Телефон: +7 (495) 123-45-67<br>
+                📧 Email: info@fishing-wardrobe.ru<br>
+                🕐 Режим работы: Пн-Вс 9:00 - 21:00
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Рыболовный гардероб. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function() {
+                alert('Товар добавлен в корзину!');
+            });
+        });
+    </script>
+</body>
+</html>

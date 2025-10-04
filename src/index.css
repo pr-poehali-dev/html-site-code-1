@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -6,40 +6,40 @@
 
 @layer base {
   :root {
-    --background: 220 25% 8%;
-    --foreground: 0 0% 98%;
+    --background: 0 0% 96%;
+    --foreground: 0 0% 20%;
 
-    --card: 220 20% 12%;
-    --card-foreground: 0 0% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 20%;
 
-    --popover: 220 20% 12%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 20%;
 
-    --primary: 17 100% 60%;
+    --primary: 158 50% 28%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 182 100% 50%;
+    --secondary: 158 40% 45%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 220 15% 20%;
-    --muted-foreground: 0 0% 65%;
+    --muted: 0 0% 90%;
+    --muted-foreground: 0 0% 40%;
 
-    --accent: 50 100% 70%;
-    --accent-foreground: 220 25% 10%;
+    --accent: 0 72% 51%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 20%;
-    --input: 220 15% 20%;
-    --ring: 17 100% 60%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 158 50% 28%;
 
-    --radius: 1rem;
+    --radius: 0.5rem;
 
-    --game-orange: 17 100% 60%;
-    --game-cyan: 182 100% 50%;
-    --game-navy: 220 63% 30%;
-    --game-yellow: 50 100% 70%;
+    --fishing-green: 158 50% 28%;
+    --fishing-light-green: 158 40% 45%;
+    --fishing-red: 0 72% 51%;
+    --fishing-gray: 0 0% 40%;
 
     --sidebar-background: 0 0% 98%;
 
@@ -116,10 +116,10 @@
   h4,
   h5,
   h6 {
-    font-family: "Orbitron", sans-serif;
+    font-family: "Roboto", sans-serif;
   }
 
-  .font-orbitron {
-    font-family: "Orbitron", sans-serif;
+  .font-roboto {
+    font-family: "Roboto", sans-serif;
   }
 }
